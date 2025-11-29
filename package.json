@@ -1,6 +1,6 @@
 {
   "name": "toon2json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert between TOON and JSON formats bidirectionally. Fast, lightweight encoder/decoder with CLI support.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
