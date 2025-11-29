@@ -1,12 +1,25 @@
 {
   "name": "toon2json",
   "version": "1.0.0",
-  "description": "Convert between TOON and JSON formats bidirectionally",
-  "main": "index.js",
+  "description": "Convert between TOON and JSON formats bidirectionally. Fast, lightweight encoder/decoder with CLI support.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js",
-    "start": "node index.js"
+    "build": "rimraf dist && tsc",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "lint": "eslint \"src/**/*.{ts,js}\"",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"bin/**/*.mjs\"",
+    "prepare": "npm run build"
+  },
+  "bin": {
+    "toon2json": "bin/toon2json.mjs"
   },
   "keywords": [
     "toon",
@@ -14,15 +27,34 @@
     "converter",
     "format-conversion",
     "toon-to-json",
-    "json-to-toon"
+    "json-to-toon",
+    "encoding",
+    "decoding",
+    "parser"
   ],
-  "author": "",
+  "author": "Arvind Kumar",
   "license": "ISC",
   "engines": {
     "node": ">=14.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/toon2json.git"
+    "url": "https://github.com/arvind1508/toon2json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arvind1508/toon2json/issues"
+  },
+  "homepage": "https://github.com/arvind1508/toon2json#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jest": "^30.2.0",
+    "prettier": "^3.7.2",
+    "rimraf": "^6.1.2",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3"
   }
 }
