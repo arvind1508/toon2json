@@ -1,0 +1,28 @@
+{
+  "name": "toon2json",
+  "version": "1.0.0",
+  "description": "Convert between TOON and JSON formats bidirectionally",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "toon",
+    "json",
+    "converter",
+    "format-conversion",
+    "toon-to-json",
+    "json-to-toon"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/toon2json.git"
+  }
+}
